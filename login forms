@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>Login-Page</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<style>
+    #master{
+        border:2px solid green;
+        box-sizing:border-box;
+        position:absolute;
+        height:200px;
+        padding:30px;
+        text-align:center;
+    }
+    input{
+        color:blue;
+        font-size:14px;
+        padding:10px;
+    }
+    input:focus{
+        border:1px solid blue;
+    }
+    button{
+        color:blue;
+        font-size:14px;
+        padding:10px;
+</style>
+    <script>
+    $(document).ready(function(){
+        $("#d2").hide();
+        $(".sp1").click(function() {
+        $("#d1").slideUp("slow", function() {
+        $("#d2").slideDown("slow");
+        });
+        });
+        $(".sp2").click(function() {
+$("#d2").slideUp("slow", function() {
+$("#d1").slideDown("slow");
+});
+});
+    });
+    </script>
+</head>
+<body>
+<div id="master">
+<div id="d1">
+<form action="" method="post">
+<input type="textbox"><br/ >
+<button class="btn1">Login</button><br/ >
+<span class="sp1"><a href="#" >not having account?</a></span>
+</form>
+</div>
+
+<div id="d2">
+    <form action="" method="post">
+<input type="textbox"><br/ >
+<button class="btn2">signup</button><br/ >
+<span class="sp2"><a href="#" >already having account?</a></span>
+</form>
+</div>
+</div>
+</body>
+</html>
